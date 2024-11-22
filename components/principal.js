@@ -5,22 +5,24 @@ import Entypo from '@expo/vector-icons/Entypo';
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 
 export default function ComponentePrueba() {
   const categoryData = [
     {
       id: '1',
-      icon: <MaterialCommunityIcons name="star-box" size={35} color="yellow"/>,
+      icon: <MaterialIcons style={styles.icon1} name="sports-basketball" size={22} color="black" />,
       text: 'Deportivo'
     },
     {
       id: '2',
-      icon:<FontAwesome6 name="person" size={30} color="blue" />,
+      icon:<FontAwesome6 name="person" size={30} color="black" />,
       text: ' Caballero'
     },
     {
       id: '3',
-      icon: <Ionicons name="woman-sharp" size={35} color="pink" />,
+      icon: <Ionicons name="woman-sharp" size={35} color="black" />,
       text: 'Dama'
     }
   ];
@@ -50,9 +52,13 @@ export default function ComponentePrueba() {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
-        <Text style={styles.title}>Nike 2</Text>
+        <Text style={styles.title}>Kike </Text>
+         <Image
+        style={styles.image1}
+        source={{ uri: 'https://th.bing.com/th/id/R.3b53dccd2c35bbf666e3ea67724aaf22?rik=fzIPxVtS57%2fcBg&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fnike-hd-png-imagenes-de-nike-1600.png&ehk=l4s4442WBsTxfutm9C3z1BGdWrsX7YnRL4BU4xU4CUk%3d&risl=&pid=ImgRaw&r=0' }}
+      />
+        <FontAwesome5 style={styles.bag}name="shopping-bag" size={24} color="black" />
       </View>
-
       <Searchbar style={styles.searchbar} placeholder="The best shoes in the area..." />
       <Text style={styles.title2}>Categories</Text>
       
@@ -94,6 +100,7 @@ const styles = StyleSheet.create({
     fontSize: 40,
     fontWeight: "700",
     top: 45,
+    paddingLeft:155,
   },
   searchbar: {
     marginVertical: 10,
@@ -148,6 +155,20 @@ const styles = StyleSheet.create({
  },
  categoryContainer:{
    overflowX:'scroll', 
- }
+ },
+ icon1:{
+   marginRight:5
+ },
+ bag:{
+  top:45,
+  marginRight:40,
+ },
+ image1:{
+   width:100,
+   height:100,
+   right:225,
+   top:45,
+ },
 });
+
 
