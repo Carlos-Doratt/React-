@@ -1,50 +1,53 @@
-import { setStatusBarBackgroundColor, StatusBar } from 'expo-status-bar';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View, StatusBar } from 'react-native';
+import Input from './components/Input';
+import Entypo from '@expo/vector-icons/Entypo';
+import Texto from './components/Texto'
+import Category from './components/Category'
+import Popular from './components/Popular'
+import Last from './components/Last'
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
+  < SafeAreaView style={styles.containerMain}>
+     <View style={styles.firstContainer}>
+     <Texto/>
+     <Input/>
 
-      //primero 
-      <View style={styles.container1}>
-
-      </View>
-      //segundo
-
-      <View style={styles.container2}>
-
-      </View>
-
-      // Tercero 
-      <View style= {styles.container3}>
-
-      </View>
+     </View>
+     <View style={styles.secondContainer}>
+     <Category/>
+     
 
 
-
-    </SafeAreaView>
+    
+     </View>
+     <View style={styles.thirdContainer}>
+     <Popular/>
+     <Last/>
+    
+     </View>
+       
+   </ SafeAreaView>
+  
+  
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  containerMain: {
     flex: 1,
-    
   },
-  container1:{
-flex: 1,
-backgroundColor: ''
-
+  firstContainer:{
+    flex: 1.3 , 
+    backgroundColor: ""
   },
-  container2:{
-   flex: 2 ,
-   backgroundColor: ''
-
+  secondContainer:{
+    flex: 1.2,
+    backgroundColor: ""
   },
-  container3:{
-    flex:3 ,
-    backgroundColor: ''
+  thirdContainer:{
+    flex: 3,
+    backgroundColor: ""
   }
-
 
 });
